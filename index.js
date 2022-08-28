@@ -12,10 +12,11 @@ app.use(express.json());
 
 
 const mongoose = require('mongoose')
-mongoose.connect('mongodb+srv://jungmin:sire09@cluster98.lqvzyon.mongodb.net/?retryWrites=true&w=majority', {
-    // useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, useFindAndModify: false 
-}).then(() => console.log('MongoDB Connected...'))
-  .catch(err => console.log(err))
+
+//mongoose.connect('mongodb+srv://jungmin:sire09@cluster98.lqvzyon.mongodb.net/?retryWrites=true&w=majority', {
+     //useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, useFindAndModify: false 
+  //}).then(() => console.log('MongoDB Connected...'))
+    //.catch(err => console.log(err))
 
 
 app.get('/', (req, res) => res.send('Hello World!'))
@@ -35,4 +36,4 @@ app.post('/register', (req,res) => {
    })
  })
 
-app.listen(port, () => {console.log(`Example app listening on port ${port}`)})
+app.listen(port, () => {console.log('Example app listening on port ${port}')})
